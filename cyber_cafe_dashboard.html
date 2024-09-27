@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Cafe Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .user-info {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .user-info img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 60px);
+            flex-wrap: wrap;
+        }
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
+        }
+        .card h3 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 14px;
+            color: #666;
+        }
+        .card button {
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .card button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        // Function to get the email from the URL query string
+        function getEmailFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('email');
+        }
+
+        // Display email and Gmail logo
+        window.onload = function() {
+            const userEmail = getEmailFromUrl();
+            if (userEmail) {
+                document.getElementById('user-email').textContent = userEmail;
+                document.getElementById('user-info').style.display = 'flex'; // Show user info
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Welcome to headboy KO CYBER CAFE!</h1>
+        <div id="user-info" class="user-info" style="display: none;">
+            <img src="https://dthezntil550i.cloudfront.net/04/latest/041812292356109510006355530/1280_960/72cbf57a-3480-4c08-a939-67a5e87a273c.png" alt="Gmail Logo"> <!-- Replace with actual Gmail logo path -->
+            <span id="user-email"></span>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <!-- Browsing Button -->
+        <div class="card">
+            <img src="https://i.ytimg.com/vi/L05Y-2G5zKs/mqdefault.jpg" alt="Browse Icon">
+            <h3>Browse Internet</h3>
+            <p>Access the internet for anything ..Afai hera</p>
+            <button onclick="window.location.href='browse_internet.html'">Start Browsing</button>
+        </div>
+
+        <!-- Play Games Button -->
+        <div class="card">
+            <img src="https://i.pinimg.com/originals/cb/3e/01/cb3e014d6122af3b43933bb571859ae7.png" alt="Games Icon">
+            <h3>Play Games</h3>
+            <p>Enjoy online games! and kta kt ko dil sanga pani khela</p>
+            <button onclick="window.location.href='play_games.html'">Play Now</button>
+        </div>
+
+        <!-- Printing Button -->
+        <div class="card">
+            <img src="https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/16620/production/_91408619_55df76d5-2245-41c1-8031-07a4da3f313f.jpg" alt="Print Icon">
+            <h3>Printing Service</h3>
+            <p>Get your documents printed easily at shop not here dumbass</p>
+            <button onclick="window.location.href='printing_service_prank.html'">Print Now at shop</button>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Games</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #4CAF50;
+            padding: 20px;
+            color: white;
+        }
+        .content {
+            padding: 20px;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            // Redirect to Poki.com after 3 seconds
+            setTimeout(function() {
+                window.location.href = 'https://www.poki.com';
+            }, 3000);
+        }
+    </script>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Play Games</h1>
+    </div>
+
+    <div class="content">
+        <h2>Redirecting to Poki.com...</h2>
+        <p>You will be redirected shortly. Enjoy your gaming session!</p>
+        <button onclick="window.location.href='cyber_cafe_dashboard.html'">Back to Dashboard</button>
+    </div>
+
+</body>
+</html>
